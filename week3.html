@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Components - Blog & E-Commerce</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      width: 250px;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .sidebar h3 { margin-top: 0; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar ul li { margin: 15px 0; }
+    .sidebar ul li a { color: white; text-decoration: none; }
+
+    /* Product Cards */
+    .product-section { margin-left: 270px; padding: 20px; }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .product-card h4 { margin: 10px 0; }
+    .product-card p { font-size: 0.9em; color: #555; }
+    .product-card button {
+      background: #27ae60;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .product-card button:hover { background: #219150; }
+
+    /* Blog Layout */
+    .blog-section { margin-left: 270px; padding: 20px; }
+    .blog-container { display: flex; gap: 20px; }
+    .blog-column {
+      flex: 1;
+      background: white;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    .blog-column h3 { margin-top: 0; }
+    .ad-box {
+      background: #f1f1f1;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px dashed #bbb;
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .sidebar { width: 100%; position: relative; min-height: auto; }
+      .product-section, .blog-section { margin-left: 0; }
+      .blog-container { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      .product-card { padding: 10px; }
+      .product-card button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Sidebar Menu</h3>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+<!-- Product Section -->
+<div class="product-section" id="products">
+  <h2>E-Commerce Product Cards</h2>
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="C:/Users/srsis/OneDrive/Pictures/Screenshots/Screenshot 2025-08-26 085313.png" alt="Apple 2025 MacBook Air">
+      <h4>Apple 2025 MacBook Air</h4>
+      <p>A sleek and powerful MacBook Air featuring Apple’s latest M4 chip with 10-core CPU, 16 GB memory, and 256 GB SSD.</p>
+      <button>Buy Now</button>
+    </div>
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="C:/Users/srsis/OneDrive/Pictures/Screenshots/Screenshot 2025-08-26 090348.png" alt="ASUS ROG Strix G16">
+      <h4>ASUS ROG Strix G16</h4>
+      <p>Gaming laptop with Intel Core i7-13650HX, NVIDIA RTX 4050, 16 GB RAM, 1 TB SSD, and 16″ FHD+ 165 Hz display.</p>
+      <button>Buy Now</button>
+    </div>
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="C:/Users/srsis/OneDrive/Pictures/Screenshots/Screenshot 2025-08-26 090454.png" alt="Sony DualSense Edge Controller">
+      <h4>Sony DualSense Edge Controller</h4>
+      <p>Customizable PS5 controller with adaptive triggers, swappable buttons, and immersive haptic feedback.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Blog Section -->
+  <div class="blog-section" id="blog">
+    <h2>Tech Blog & Articles</h2>
+    <div class="blog-container">
+      <!-- Left Sidebar -->
+      <div class="blog-column">
+        <h3>Sponsored Ads</h3>
+        <div class="ad-box">🔥 Special Offer: Get 20% off Gaming Laptops</div>
+        <div class="ad-box">🎧 Buy Sony PS5 Accessories – Free Shipping</div>
+        <div class="ad-box">💻 Trade-in your old laptop for discounts on MacBooks</div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="blog-column">
+        <h3>Article: Choosing the Right Tech in 2025</h3>
+        <p>
+          With so many laptops and gaming devices on the market, choosing the right one can feel overwhelming.
+          Apple’s new MacBook Air is a perfect choice for professionals who need portability and performance.
+        </p>
+        <p>
+          If you’re into gaming, the ASUS ROG Strix G16 offers an unmatched combination of graphics power and refresh rate,
+          making it a beast for modern titles.
+        </p>
+        <p>
+          For console gamers, Sony’s DualSense Edge controller adds next-level immersion with adaptive triggers and haptics.
+          Whether you’re a student, professional, or gamer, investing in the right gadget can transform your experience.
+        </p>
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="blog-column">
+        <h3>Latest Tech Blogs</h3>
+        <ul>
+          <li>📢 Top 5 Gaming Laptops of 2025</li>
+          <li>🎮 Best Accessories for PS5 Gamers</li>
+          <li>💡 Why MacBook Air is still the best student laptop</li>
+          <li>⚡ M4 Chip vs Intel i9 – Performance Showdown</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

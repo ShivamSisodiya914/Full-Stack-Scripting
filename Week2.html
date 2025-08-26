@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Company</title>
+  <style>
+    /* === Element selector === */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa; /* HEX color */
+      color: rgb(34, 34, 34);    /* RGB format */
+    }
+
+    header, footer {
+      background-color: rgba(33, 150, 243, 0.9); /* RGBA format */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* === ID selector === */
+    #main-title {
+      font-size: 2em;
+      color: hsl(210, 70%, 50%); /* HSL color format */
+      margin: 0;
+    }
+
+    /* === Class selector === */
+    .highlight {
+      background-color: #ffe066;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+
+    /* === Attribute selector === */
+    a[href^="mailto"] {
+      color: green;
+      font-weight: bold;
+    }
+
+    a[href^="http"] {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    /* === Pseudo-class selectors === */
+    a:hover {
+      text-decoration: underline;
+      color: crimson;
+    }
+
+    /* === Pseudo-element selector === */
+    p::first-letter {
+      font-size: 120%;
+      font-weight: bold;
+      color: #e63946;
+    }
+
+    /* === Unordered Movie List === */
+    ul.movies {
+      list-style-type: square;
+      margin-top: 20px;
+    }
+
+    ul.movies li {
+      padding: 5px;
+    }
+
+    .favorite {
+      color: white;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+
+    /* === Ordered City List with custom styling === */
+    ol.cities {
+      counter-reset: city-counter;
+      list-style: none; /* remove default numbers */
+      padding: 0;
+    }
+
+    ol.cities li {
+      counter-increment: city-counter;
+      position: relative;
+      margin: 10px 0;
+      padding-left: 40px;
+      background: rgba(100, 100, 255, 0.1);
+      border-left: 4px solid hsl(200, 60%, 50%);
+    }
+
+    ol.cities li::before {
+      content: counter(city-counter) ".";
+      position: absolute;
+      left: 10px;
+      color: #2d6a4f;
+      font-weight: bold;
+    }
+
+    ol.cities li:hover {
+      background-color: rgba(255, 200, 100, 0.3);
+      transform: scale(1.02);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="main-title">About Us</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Who We Are</h2>
+      <p>We are a <span class="highlight">creative tech company</span> focused on building modern, efficient, and innovative solutions for businesses worldwide.</p>
+      <p>Our mission is to blend technology with design to create meaningful user experiences. <a href="mailto:contact@company.com">Email us</a> or visit our <a href="http://example.com">company site</a>.</p>
+    </section>
+
+    <section>
+      <h2>Our Values</h2>
+      <p>Innovation, Integrity, and Impact define our culture. We embrace diversity and inclusivity, and we strive to make technology accessible for all.</p>
+    </section>
+
+    <!-- Movies List -->
+    <section>
+      <h2>Our Favorite Movies</h2>
+      <ul class="movies">
+        <li>Inception</li>
+        <li>Interstellar</li>
+        <li class="favorite">The Matrix</li>
+        <li>Parasite</li>
+        <li>Spirited Away</li>
+      </ul>
+    </section>
+
+    <!-- Cities List -->
+    <section>
+      <h2>Top Cities We Love</h2>
+      <ol class="cities">
+        <li>Tokyo</li>
+        <li>Paris</li>
+        <li>New York</li>
+        <li>London</li>
+        <li>Sydney</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Creative Tech Company</p>
+  </footer>
+</body>
+</html>
